@@ -1,0 +1,4 @@
+rootProject.name = 'skm-reference'
+
+include 'simulator'
+

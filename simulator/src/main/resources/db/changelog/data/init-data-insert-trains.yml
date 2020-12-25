@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2020_12_10-insert-initial-data-trains
+      author: jan.wieczorek
+      changes:
+        - sqlFile:
+            splitStatements: true
+            stripComments: true
+            path: db/changelog/data/sql/insert-trains.sql

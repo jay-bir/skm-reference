@@ -1,0 +1,60 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2020_23.12-initial-tables
+      author: jan.wieczorek
+      preConditions:
+        - onFail: MARK_RAN
+          not:
+            tableExists:
+              tableName: trains, compartments
+      changes:
+        - createTable:
+            tableName: trains
+            columns:
+              - column:
+                  name: id
+                  type: INT
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: train_id_pkey
+              - column:
+                  name: current_station
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: going_to_gdansk
+                  type: boolean
+                  constraints:
+                    nullable: false
+              - column:
+                  name: current_pause_time
+                  type: INT
+                  constraints:
+                    nullable: false
+        - createTable:
+            tableName: compartments
+            columns:
+              - column:
+                  name: id
+                  type: INT
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: compartment_id_pkey
+              - column:
+                  name: capacity
+                  type: INT
+                  defaultValue: 16
+                  constraints:
+                    nullable: false
+              - column:
+                  name: train_id
+                  type: INT
+                  constraints:
+                    nullable: true
+                    foreignKeyName: compartment_train_id_fkey
+                    references: trains(id)

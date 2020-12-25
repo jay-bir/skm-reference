@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="pl.edu.pjatk.simulator.service.TrainServiceTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2020-12-25T18:27:19" hostname="DESKTOP-9U5H4BF" time="0.073">
+  <properties/>
+  <testcase name="attachWithExistingCompartmentShouldAddItToTheTrain()" classname="pl.edu.pjatk.simulator.service.TrainServiceTest" time="0.025"/>
+  <testcase name="updateShouldSetNewValuesToTheSavedTrain()" classname="pl.edu.pjatk.simulator.service.TrainServiceTest" time="0.005"/>
+  <testcase name="updateWithNullIdShouldThrowAnException()" classname="pl.edu.pjatk.simulator.service.TrainServiceTest" time="0.005"/>
+  <testcase name="detachWithExistingCompartmentShouldRemoveItFromTrain()" classname="pl.edu.pjatk.simulator.service.TrainServiceTest" time="0.007"/>
+  <testcase name="createWithIdNullShouldSaveToRepository()" classname="pl.edu.pjatk.simulator.service.TrainServiceTest" time="0.005"/>
+  <testcase name="createWithNotNullIdShouldThrowException()" classname="pl.edu.pjatk.simulator.service.TrainServiceTest" time="0.003"/>
+  <testcase name="moveTimeForwardTest()" classname="pl.edu.pjatk.simulator.service.TrainServiceTest" time="0.007"/>
+  <testcase name="updateWhenTrainNotPresentInDbShouldThrowAnException()" classname="pl.edu.pjatk.simulator.service.TrainServiceTest" time="0.004"/>
+  <system-out><![CDATA[2020-12-25 19:27:17.968  INFO 15668 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [pl.edu.pjatk.simulator.service.TrainServiceTest], using SpringBootContextLoader
+2020-12-25 19:27:17.970  INFO 15668 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [pl.edu.pjatk.simulator.service.TrainServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-12-25 19:27:17.971  INFO 15668 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [pl.edu.pjatk.simulator.service.TrainServiceTest]: TrainServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-12-25 19:27:17.975  INFO 15668 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration pl.edu.pjatk.simulator.Application for test class pl.edu.pjatk.simulator.service.TrainServiceTest
+2020-12-25 19:27:17.976  INFO 15668 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-12-25 19:27:17.977  INFO 15668 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2ffb23de, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@29662ff4, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6bf84cca, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@421c8bd5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@340fa59b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2c8e3561, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@539a226, org.springframework.test.context.event.EventPublishingTestExecutionListener@235dd377, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6a3799fa, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@37cf9ce0, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7faf20ad, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@32248244, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@648a35b3, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2fe98d5e]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.4.RELEASE)
+
+2020-12-25 19:27:18.016  INFO 15668 --- [    Test worker] p.e.p.s.service.TrainServiceTest         : Starting TrainServiceTest on DESKTOP-9U5H4BF with PID 15668 (started by Ja in D:\Documents\JAZ\skm\skm-jb\skm-reference\simulator)
+2020-12-25 19:27:18.018  INFO 15668 --- [    Test worker] p.e.p.s.service.TrainServiceTest         : No active profile set, falling back to default profiles: default
+2020-12-25 19:27:18.325  INFO 15668 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-12-25 19:27:18.341  INFO 15668 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 2 JPA repository interfaces.
+2020-12-25 19:27:18.490  INFO 15668 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-12-25 19:27:18.494  INFO 15668 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-12-25 19:27:18.504  INFO 15668 --- [    Test worker] liquibase.lockservice                    : Successfully acquired change log lock
+2020-12-25 19:27:18.519  INFO 15668 --- [    Test worker] liquibase.changelog                      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2020-12-25 19:27:18.521  INFO 15668 --- [    Test worker] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2020-12-25 19:27:18.539  INFO 15668 --- [    Test worker] liquibase.changelog                      : Table trains created
+2020-12-25 19:27:18.543  INFO 15668 --- [    Test worker] liquibase.changelog                      : Table compartments created
+2020-12-25 19:27:18.543  INFO 15668 --- [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/tables/init-tables.yml::2020_23.12-initial-tables::jan.wieczorek ran successfully in 10ms
+2020-12-25 19:27:18.548  INFO 15668 --- [    Test worker] liquibase.changelog                      : SQL in file db/changelog/data/sql/insert-trains.sql executed
+2020-12-25 19:27:18.549  INFO 15668 --- [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/data/init-data-insert-trains.yml::2020_12_10-insert-initial-data-trains::jan.wieczorek ran successfully in 4ms
+2020-12-25 19:27:18.560  INFO 15668 --- [    Test worker] liquibase.changelog                      : SQL in file db/changelog/data/sql/insert-compartments.sql executed
+2020-12-25 19:27:18.561  INFO 15668 --- [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/data/init-data-insert-compartments.yml::20202_12_25-insert-initial-data-compartments::jan.wieczorek ran successfully in 10ms
+2020-12-25 19:27:18.564  INFO 15668 --- [    Test worker] liquibase.lockservice                    : Successfully released change log lock
+2020-12-25 19:27:18.615  INFO 15668 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-25 19:27:18.638  INFO 15668 --- [         task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-25 19:27:18.645  INFO 15668 --- [         task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-12-25 19:27:18.695  INFO 15668 --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-25 19:27:18.696  INFO 15668 --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-25 19:27:18.806  WARN 15668 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-25 19:27:19.315  INFO 15668 --- [    Test worker] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-12-25 19:27:19.391  INFO 15668 --- [    Test worker] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-12-25 19:27:19.397  INFO 15668 --- [    Test worker] p.e.p.s.service.TrainServiceTest         : Started TrainServiceTest in 1.418 seconds (JVM running for 9.017)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -3,17 +3,29 @@ package pl.edu.pjatk.simulator.model;
 import pl.edu.pjatk.simulator.service.Identifiable;
 import pl.edu.pjatk.simulator.util.PersonGenerator;
 
-import java.util.Collection;
+import javax.persistence.*;
 import java.util.List;
-
+@Entity
+@Table(name = "trains")
 public class Train implements Identifiable {
-    private final int id;
-    private final List<Compartment> compartments;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private  Long id;
+
+
+    @OneToMany(mappedBy = "train")
+    private  List<Compartment> compartments;
+
+    @Column(name = "current_station")
     private Station currentStation;
+
+    @Column(name = "going_to_gdansk")
     private boolean goingToGdansk;
+
+    @Column(name = "current_pause_time")
     private int currentPauseTime;
 
-    public Train(int id, List<Compartment> compartments, Station currentStation, boolean goingToGdansk) {
+    public Train(Long id, List<Compartment> compartments, Station currentStation, boolean goingToGdansk) {
         this.id = id;
         this.compartments = compartments;
         this.currentStation = currentStation;
@@ -21,15 +33,41 @@ public class Train implements Identifiable {
         this.currentPauseTime = 0;
     }
 
-    public Collection<Compartment> getCompartments() {
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setCurrentStation(Station currentStation) {
+        this.currentStation = currentStation;
+    }
+
+    public void setGoingToGdansk(boolean goingToGdansk) {
+        this.goingToGdansk = goingToGdansk;
+    }
+
+    public void setCurrentPauseTime(int currentPauseTime) {
+        this.currentPauseTime = currentPauseTime;
+    }
+
+    public Train(){}
+
+    public List<Compartment> getCompartments() {
         return compartments;
+    }
+
+    public void setCompartments(List<Compartment> compartments) {
+        this.compartments = compartments;
+    }
+
+    public void addCompartment(Compartment compartment){
+        this.compartments.add(compartment);
     }
 
     public Station getCurrentStation() {
         return currentStation;
     }
 
-    public boolean isGoingToGdansk() {
+    public boolean getGoingToGdansk() {
         return goingToGdansk;
     }
 
@@ -49,16 +87,17 @@ public class Train implements Identifiable {
                 goingToGdansk = !goingToGdansk;
             }
 
-            compartments.forEach(c -> c.disembark(this.currentStation));
-            compartments.forEach(c -> {
-                List<Person> people = PersonGenerator.generatePeople(this.currentStation);
-                people.forEach(c::embark);
-            });
+            //For now cannot be done with passengers as transient
+//            compartments.forEach(c -> c.disembark(this.currentStation));
+//            compartments.forEach(c -> {
+//                List<Person> people = PersonGenerator.generatePeople(this.currentStation);
+//                people.forEach(c::embark);
+//            });
         }
     }
 
     @Override
-    public long getId() {
+    public Long getId() {
         return id;
     }
 }

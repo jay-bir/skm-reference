@@ -1,7 +1,19 @@
 version: '3'
 services:
+  skmdb:
+    build: ./db
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: pwd
+      MYSQL_DATABASE: skm
+      MYSQL_USER: manager
+      MYSQL_PASSWORD: pwd
   simulator:
     build: ./simulator
     ports:
       - "11111:11111"
     restart: on-failure:5
+    depends_on:
+      - skmdb

@@ -1,0 +1,40 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2021_01_30-initial-user-tables
+      author: jan.wieczorek
+      preConditions:
+        - onFail: MARK_RAN
+          not:
+            tableExists:
+              tableName: users, users_authority
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: username
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: fale
+                    primaryKey: true
+                    primaryKeyName: user_username_pkey
+              - column:
+                  name: password
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+        - createTable:
+            tableName: users_authority
+            columns:
+              - column:
+                  name: users_username
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+                    foreignKeyName: auth_user_username_fkey
+                    references: users(username)
+              - column:
+                  name: authorities
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: true

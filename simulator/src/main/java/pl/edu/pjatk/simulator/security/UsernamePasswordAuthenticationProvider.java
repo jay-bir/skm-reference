@@ -1,4 +1,4 @@
-package pl.edu.pjwstk.jazapi.security;
+package pl.edu.pjatk.simulator.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;

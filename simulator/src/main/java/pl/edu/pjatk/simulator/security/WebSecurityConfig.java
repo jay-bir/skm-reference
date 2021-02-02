@@ -1,6 +1,5 @@
-package pl.edu.pjwstk.jazapi.security;
+package pl.edu.pjatk.simulator.security;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -16,7 +15,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers(HttpMethod.POST, "/login").permitAll()
-                .antMatchers("/**").hasAuthority("ROLE_ADMIN")
+                .antMatchers("/users/**").hasAuthority("ROLE_ADMIN")
+                .antMatchers(HttpMethod.GET,"/**").hasAnyAuthority("ROLE_ADMIN, ROLE_MANAGER, ROLE_USER")
+                .antMatchers("/**").hasAnyAuthority("ROLE_ADMIN", "ROLE_MANAGER")
                 .anyRequest().authenticated()
                 .and()
                     .addFilter(new TokenAuthenticationFilter(authenticationManager()))

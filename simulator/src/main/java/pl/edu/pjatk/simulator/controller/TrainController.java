@@ -20,6 +20,8 @@ public class TrainController {
         this.trainService = service;
     }
 
+    protected TrainController(){}
+
     @GetMapping()
     public ResponseEntity<List<Map<String, Object>>> getAllTrains() {
         try {
@@ -124,5 +126,4 @@ public class TrainController {
             return payload;
         };
     }
-
 }

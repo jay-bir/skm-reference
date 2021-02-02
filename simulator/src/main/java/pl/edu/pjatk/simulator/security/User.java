@@ -1,18 +1,30 @@
-package pl.edu.pjwstk.jazapi.security;
+package pl.edu.pjatk.simulator.security;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
 
+@Entity
+@Table(name = "users")
 public class User implements UserDetails {
+
+    @Id
+    @NotBlank
     private String username;
+    @NotBlank
     private String password;
-    private Collection<GrantedAuthority> authorities;
+    @ElementCollection(fetch = FetchType.EAGER)
+    @CollectionTable(name = "users_authority", joinColumns = @JoinColumn(name = "users_username"))
+    private Collection<String> authorities;
 
     public User() {}
 
-    public User(String username, String password, Collection<GrantedAuthority> authorities) {
+    public User(String username, String password, Collection<String> authorities) {
         this.username = username;
         this.password = password;
         this.authorities = authorities;
@@ -20,7 +32,7 @@ public class User implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return authorities;
+        return authorities.stream().map( s -> (GrantedAuthority) () -> s).collect(Collectors.toList());
     }
 
     @Override
@@ -61,7 +73,7 @@ public class User implements UserDetails {
         this.password = password;
     }
 
-    public void setAuthorities(Collection<GrantedAuthority> authorities) {
+    public void setAuthorities(List<String> authorities){
         this.authorities = authorities;
     }
 }

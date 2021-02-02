@@ -5,3 +5,7 @@ databaseChangeLog:
       file: db/changelog/data/init-data-insert-trains.yml
   - include:
       file: db/changelog/data/init-data-insert-compartments.yml
+  - include:
+      file: db/changelog/tables/user-tables.yml
+  - include:
+      file: db/changelog/data/init-data-insert-users-and-authorities.yml

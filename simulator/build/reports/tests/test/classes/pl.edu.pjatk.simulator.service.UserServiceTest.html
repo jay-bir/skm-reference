@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - UserServiceTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>UserServiceTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/pl.edu.pjatk.simulator.service.html">pl.edu.pjatk.simulator.service</a> &gt; UserServiceTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">8</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.285s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">addUser()</td>
+<td class="success">0.133s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">addUserExpectedException()</td>
+<td class="success">0.043s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">deleteUserByIdWithExistingUser()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">deleteUserByIdWithNullUser()</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">findUserByUsernameTestWithExistingUser()</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">findUserByUsernameWithNullUser()</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">updateUserTest()</td>
+<td class="success">0.080s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">updateUserWithNoUser()</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>17:54:17.426 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+17:54:17.448 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+17:54:17.489 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [pl.edu.pjatk.simulator.service.UserServiceTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+17:54:17.507 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [pl.edu.pjatk.simulator.service.UserServiceTest], using SpringBootContextLoader
+17:54:17.510 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [pl.edu.pjatk.simulator.service.UserServiceTest]: class path resource [pl/edu/pjatk/simulator/service/UserServiceTest-context.xml] does not exist
+17:54:17.511 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [pl.edu.pjatk.simulator.service.UserServiceTest]: class path resource [pl/edu/pjatk/simulator/service/UserServiceTestContext.groovy] does not exist
+17:54:17.511 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [pl.edu.pjatk.simulator.service.UserServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+17:54:17.512 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [pl.edu.pjatk.simulator.service.UserServiceTest]: UserServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:54:17.565 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [pl.edu.pjatk.simulator.service.UserServiceTest]
+17:54:17.668 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [D:\Documents\JAZ\skm-last\skm-reference\simulator\build\classes\java\main\pl\edu\pjatk\simulator\Application.class]
+17:54:17.671 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration pl.edu.pjatk.simulator.Application for test class pl.edu.pjatk.simulator.service.UserServiceTest
+17:54:17.833 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [pl.edu.pjatk.simulator.service.UserServiceTest]: using defaults.
+17:54:17.833 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+17:54:17.867 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5e29eefb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7f683a1b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@164b3636, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@39b3f724, org.springframework.test.context.support.DirtiesContextTestExecutionListener@28fc88df, org.springframework.test.context.transaction.TransactionalTestExecutionListener@167ac739, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@59cfa946, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@7fe36f8c, org.springframework.test.context.event.EventPublishingTestExecutionListener@3315badf, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@7316e08b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5737e236, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@334c7853, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2d91efa7, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@69c75026, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@109397a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@515757e8]
+17:54:17.873 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@7e9afefd testClass = UserServiceTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@14155b46 testClass = UserServiceTest, locations = '{}', classes = '{class pl.edu.pjatk.simulator.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@24e41f7, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@51fa063d, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@45220057, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@71c167fa, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
+17:54:17.932 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.4.RELEASE)
+
+2021-02-02 17:54:18.329  INFO 3736 --- [    Test worker] p.e.p.simulator.service.UserServiceTest  : Starting UserServiceTest on DESKTOP-9U5H4BF with PID 3736 (started by Ja in D:\Documents\JAZ\skm-last\skm-reference\simulator)
+2021-02-02 17:54:18.332  INFO 3736 --- [    Test worker] p.e.p.simulator.service.UserServiceTest  : No active profile set, falling back to default profiles: default
+2021-02-02 17:54:19.436  INFO 3736 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-02-02 17:54:19.530  INFO 3736 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82ms. Found 3 JPA repository interfaces.
+2021-02-02 17:54:20.136  INFO 3736 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-02 17:54:20.374  INFO 3736 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-02 17:54:20.775  INFO 3736 --- [    Test worker] liquibase.lockservice                    : Successfully acquired change log lock
+2021-02-02 17:54:21.221  INFO 3736 --- [    Test worker] liquibase.changelog                      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2021-02-02 17:54:21.227  INFO 3736 --- [    Test worker] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2021-02-02 17:54:21.359  INFO 3736 --- [    Test worker] liquibase.changelog                      : Table trains created
+2021-02-02 17:54:21.373  INFO 3736 --- [    Test worker] liquibase.changelog                      : Table compartments created
+2021-02-02 17:54:21.374  INFO 3736 --- [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/tables/init-tables.yml::2020_23.12-initial-tables::jan.wieczorek ran successfully in 54ms
+2021-02-02 17:54:21.410  INFO 3736 --- [    Test worker] liquibase.changelog                      : SQL in file db/changelog/data/sql/insert-trains.sql executed
+2021-02-02 17:54:21.411  INFO 3736 --- [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/data/init-data-insert-trains.yml::2020_12_10-insert-initial-data-trains::jan.wieczorek ran successfully in 11ms
+2021-02-02 17:54:21.433  INFO 3736 --- [    Test worker] liquibase.changelog                      : SQL in file db/changelog/data/sql/insert-compartments.sql executed
+2021-02-02 17:54:21.433  INFO 3736 --- [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/data/init-data-insert-compartments.yml::20202_12_25-insert-initial-data-compartments::jan.wieczorek ran successfully in 18ms
+2021-02-02 17:54:21.450  INFO 3736 --- [    Test worker] liquibase.changelog                      : Table users created
+2021-02-02 17:54:21.453  INFO 3736 --- [    Test worker] liquibase.changelog                      : Table users_authority created
+2021-02-02 17:54:21.453  INFO 3736 --- [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/tables/user-tables.yml::2021_01_30-initial-user-tables::jan.wieczorek ran successfully in 17ms
+2021-02-02 17:54:21.465  INFO 3736 --- [    Test worker] liquibase.changelog                      : SQL in file db/changelog/data/sql/insert-users.sql executed
+2021-02-02 17:54:21.466  INFO 3736 --- [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/data/init-data-insert-users-and-authorities.yml::2020_01_30-insert-initial-data-users::jan.wieczorek ran successfully in 9ms
+2021-02-02 17:54:21.470  INFO 3736 --- [    Test worker] liquibase.lockservice                    : Successfully released change log lock
+2021-02-02 17:54:21.593  INFO 3736 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-02 17:54:21.695  INFO 3736 --- [         task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-02 17:54:21.823  INFO 3736 --- [         task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2021-02-02 17:54:21.926  WARN 3736 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-02 17:54:22.095  INFO 3736 --- [         task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-02-02 17:54:22.295  INFO 3736 --- [         task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-02-02 17:54:22.346  INFO 3736 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@54839bfc, org.springframework.security.web.context.SecurityContextPersistenceFilter@359db87e, org.springframework.security.web.header.HeaderWriterFilter@6dd36758, org.springframework.security.web.authentication.logout.LogoutFilter@410809bb, pl.edu.pjatk.simulator.security.TokenAuthenticationFilter@75b3b3fa, pl.edu.pjatk.simulator.security.TokenAuthorizationFilter@5f564af6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1bdd335f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c5afe0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4c6947fc, org.springframework.security.web.session.SessionManagementFilter@14f56e47, org.springframework.security.web.access.ExceptionTranslationFilter@5022ae3d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@48de1089]
+2021-02-02 17:54:23.623  INFO 3736 --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-02 17:54:23.641  INFO 3736 --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-02 17:54:23.719  INFO 3736 --- [    Test worker] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-02-02 17:54:24.075  INFO 3736 --- [    Test worker] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-02-02 17:54:24.086  INFO 3736 --- [    Test worker] p.e.p.simulator.service.UserServiceTest  : Started UserServiceTest in 6.132 seconds (JVM running for 7.56)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.3</a> at 2 lut 2021, 17:54:26</p>
+</div>
+</div>
+</body>
+</html>
